@@ -81,12 +81,12 @@ body {
 /* Estilo para el feed */
 .feed {
     margin-top: 25px;
-    width: 100%;
-    max-width: 100%;
+    /* margin-left: 65%; */
     /* Cercanía de la sidebar */
-    margin-left: 65%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
 }
 
 .post {
@@ -409,7 +409,7 @@ footer a:hover {
     /* Fondo blanco para la lista */
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .contact-list h2 {
