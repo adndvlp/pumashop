@@ -307,6 +307,7 @@ footer p {
 footer a {
     color: #003366;
     text-decoration: none;
+    padding-left: 4px;
     transition: color 0.3s ease;
 }
 
