@@ -1,0 +1,109 @@
+html {
+    --s: 100px;
+    /* control the size */
+    --c1: #d0c058;
+    /* color oro */
+    --c2: #2a2eac;
+    /* color azul */
+    --_g: var(--c1) 90deg, #0000 90.5deg;
+    background:
+        conic-gradient(from -45deg, var(--_g)),
+        conic-gradient(from 135deg, var(--_g)) calc(var(--s) / 2) 0,
+        var(--c2);
+    background-size: var(--s) var(--s);
+    height: 100vh;
+    /* Asegúrate de que el fondo cubra toda la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register-form,
+#login-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    /* Espacio entre los formularios */
+}
+
+h1 {
+    color: var(--c2);
+    /* Azul para el título */
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--c2);
+    /* Azul para las etiquetas */
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid var(--c2);
+    border-radius: 5px;
+    width: 100%;
+    /* Asegura que los inputs sean del 100% de ancho */
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total */
+}
+
+button {
+    background-color: var(--c2);
+    /* Azul para el botón */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    /* Asegura que el botón sea del 100% de ancho */
+}
+
+button:hover {
+    background-color: darkblue;
+    /* Efecto hover para el botón */
+}
+
+#login,
+#register {
+    text-align: center;
+    display: block;
+    margin: 10px;
+    color: var(--c1);
+    /* Color oro para el enlace */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+#login:hover,
+#register:hover {
+    text-decoration: underline;
+    /* Subrayado al pasar el mouse sobre el enlace */
+}
+
+#login:active,
+#register:active {
+    color: blue;
+    /* Cambia a azul al hacer clic */
+}
