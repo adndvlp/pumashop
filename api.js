@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const app = express()
 const path = require('path')
 const { Auth, isAuthenticated } = require('./auth.controller')
-const port = 3000
+const port = 10000
 
 app.use(express.json());
 
