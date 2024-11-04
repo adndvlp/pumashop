@@ -1,0 +1,993 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    height: 100%;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    margin-top: 0;
+    position: fixed;
+    right: 0;
+    background-color: #003366;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar h1 {
+    padding: 10px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+    width: 15%;
+}
+
+.navbar a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #e6b800;
+}
+
+
+.content {
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+    padding-left: 12%;
+    padding-right: 1%;
+    /* padding-left: 0%; */
+
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    display: flex;
+    margin: 0;
+    margin-top: 0;
+
+}
+
+/* Estilo para el menú lateral */
+.sidebar {
+    position: fixed;
+    margin-top: 68.5px;
+    width: 8%;
+    padding: 20px;
+    padding-top: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 0;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.link b:hover {
+    background-color: #F0F2F5;
+    /* Color de fondo al pasar el mouse */
+}
+
+.link {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Estilo para el feed */
+.feed {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.post:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.post h3 {
+    margin: 0;
+    color: #002244;
+}
+
+.post p {
+    margin: 0;
+    margin-top: 10%;
+    text-align: justify;
+}
+
+.post .actions {
+    margin-top: 5%;
+    height: max-content;
+}
+
+.post .actions button {
+    background-color: #FFD700;
+    color: #003366;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post .actions button:hover {
+    background-color: #e6b800;
+}
+
+.post-image {
+    display: flex;
+    margin: 10px auto;
+    max-width: 100%;
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Estilo para el Feed de la main page*/
+.feede {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Espacio entre los posts */
+}
+
+/* Estilo para cada post de la main page*/
+.posti {
+    /* height: fit-content; */
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.posti:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.posti h3 {
+    margin: 0;
+}
+
+.posti p {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.posti .actions {
+    margin-top: 10px;
+}
+
+.posti .actions button {
+    background-color: #FFD700;
+    /* Color de botón */
+    color: #003366;
+    /* Color del texto del botón */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.posti .actions button:hover {
+    background-color: #e6b800;
+    /* Color del botón al pasar el mouse */
+}
+
+.posti-image {
+    display: flex;
+    height: 1px;
+    width: 1px;
+    border-radius: 5px;
+    /* object-fit: cover; */
+}
+
+/* Estilo para el catálogo */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card input[type="submit"] {
+    margin-left: 25%;
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+}
+
+.product-card input[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+.product-card:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+    display: flex;
+    width: 100%;
+    height: 30%;
+    max-width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.product-info h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.price {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.location {
+    color: #888;
+}
+
+/* Estilo para el footer */
+footer {
+    background-color: #F0F2F5;
+    padding: 2rem;
+    color: #fff;
+    bottom: 0;
+    position: fixed;
+    width: 6.8%;
+    left: 0;
+    right: 0;
+    padding-left: 25px;
+}
+
+footer section {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #003366;
+    text-decoration: none;
+    padding-left: 3px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e6b800;
+}
+
+.a {
+    padding-right: 20px;
+}
+
+.b:hover {
+    color: #e6b800;
+}
+
+/* Estilo para la configuración */
+.configuracion {
+    width: 70%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 10px;
+    /* flex: 1; */
+    padding: 20px;
+    padding-right: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.configuracion h2 {
+    text-align: center;
+    color: #003366;
+}
+
+.configuracion p {
+    text-align: center;
+}
+
+.configuracion label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.configuracion input[type="text"],
+.configuracion input[type="email"],
+.configuracion input[type="password"],
+.configuracion select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.configuracion input[type="submit"] {
+    background-color: #003366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.configuracion input[type="submit"]:hover {
+    background-color: #e6b800;
+}
+
+/* Sección de Perfil */
+
+.profile-container {
+    justify-content: center;
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.profile-info .bio {
+    font-size: 14px;
+    color: #888;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.edit-profile-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-profile-btn:hover {
+    background-color: #e6b800;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Sección de Editar Perfil */
+.editarperfil {
+    width: fit-content;
+    /* flex: 1; */
+    padding: 20px;
+    padding-right: 40px;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.editarperfil h2 {
+    margin-top: 0;
+    /* Elimina margen superior en el título */
+}
+
+.editarperfil label {
+    display: block;
+    /* Coloca las etiquetas en bloque */
+    margin: 10px 0 5px;
+    /* Espaciado para las etiquetas */
+}
+
+.editarperfil input[type="text"],
+.editarperfil input[type="nombrecomerce"],
+.editarperfil input[type="giro"],
+.editarperfil input[type="tel"],
+.editarperfil textarea {
+    width: 100%;
+    /* Ancho completo para los inputs */
+    padding: 10px;
+    margin-bottom: 15px;
+    /* Margen inferior */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.editarperfil textarea {
+    resize: none;
+    /* Evita que se redimensione el textarea */
+}
+
+/* Estilo para el botón de guardar */
+.editarperfil input[type="submit"] {
+    background-color: #003366;
+    /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.editarperfil input[type="submit"]:hover {
+    background-color: #e6b800;
+    /* Color del botón al pasar el mouse */
+}
+
+/* Contenedor de Mensajes */
+.messages-container {
+    display: flex;
+    /* Disposición en fila para contactos y área de chat */
+    flex: 1;
+    /* Toma el espacio restante */
+}
+
+/* Lista de Contactos */
+.contact-list {
+    width: 200px;
+    /* Ancho fijo para la lista de contactos */
+    background-color: #FFFFFF;
+    /* Fondo blanco para la lista */
+    padding: 15px;
+    /* padding-left: 10px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 5px; */
+}
+
+.contact-list h2 {
+    margin-top: 0;
+    /* Elimina margen superior en el título */
+}
+
+.lista {
+    padding: 0;
+}
+
+.contact {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    padding-left: 25%;
+}
+
+.contact:hover {
+    background-color: #F0F2F5;
+    /* Color de fondo al pasar el mouse */
+}
+
+/* Área de Conversación */
+.chat-area {
+    flex: 100%;
+    /* Toma el espacio restante */
+    padding: 20px;
+    background-color: white;
+    /* Fondo blanco para el chat */
+    /* border-radius: 10px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-area h2 {
+    margin-top: 0;
+    /* Elimina margen superior en el título */
+}
+
+/* Contenido del Chat */
+#chatContent {
+    height: 300px;
+    /* Altura fija para el área de chat */
+    overflow-y: auto;
+    /* Agrega scroll si es necesario */
+    margin-bottom: 15px;
+    /* Espacio inferior */
+}
+
+/* Contenedor de Entrada */
+.input-container {
+    display: flex;
+    /* Disposición en fila para entrada de texto y botón */
+}
+
+.input-container input[type="text"] {
+    flex: 1;
+    /* Toma el espacio restante */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    /* Espacio a la derecha */
+}
+
+.input-container button {
+    background-color: #003366;
+    /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: #002244;
+    /* Color del botón al pasar el mouse */
+}
+
+/*Contenido de amigos*/
+.suggestions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+    /* gap: 1px; */
+    margin-top: 15px;
+    gap: 2%;
+    margin-right: 15px;
+}
+
+.suggestion-card {
+    /* align-items: center; */
+    width: fit-content;
+    padding: 10px;
+    /* background-color: #FFFFFF; */
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-card:hover {
+    background-color: #f0f2f5;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+.profile-picture {
+    /* margin-bottom: 10px; */
+    width: 180px;
+    object-fit: cover
+}
+
+.add-friend-btn {
+    padding: 5px 10px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.add-friend-btn:hover {
+    background-color: #145dbf;
+}
+
+
+
+/* celular */
+
+/* Ajustes generales para pantallas pequeñas */
+
+/* S */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta la barra de navegación */
+    .navbar h1 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 50%;
+        /* Expande el campo de búsqueda en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste del contenedor principal */
+    .content {
+        padding: 0 10px;
+        margin-top: 40%;
+        padding: 5%;
+    }
+
+    /* Ajuste del menú lateral */
+    .sidebar {
+        display: none;
+    }
+
+    /* Ajustar el feed */
+    .feed,
+    .products-grid,
+    .feede {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Ajuste del catálogo */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajuste de los contenedores de perfil y configuración */
+    .profile-container,
+    .editarperfil,
+    .configuracion {
+        width: 100%;
+        /* Usa el ancho completo en móviles */
+        box-sizing: border-box;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+/* M */
+@media (max-width: 375px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta la barra de navegación */
+    .navbar h1 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 50%;
+        /* Expande el campo de búsqueda en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste del contenedor principal */
+    .content {
+        padding: 0 10px;
+        margin-top: 34%;
+        padding: 5%;
+    }
+
+    /* Ajuste del menú lateral */
+    .sidebar {
+        display: none;
+    }
+
+    /* Ajustar el feed */
+    .feed,
+    .products-grid,
+    .feede {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Ajuste del catálogo */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajuste de los contenedores de perfil y configuración */
+    .profile-container,
+    .editarperfil,
+    .configuracion {
+        width: 100%;
+        /* Usa el ancho completo en móviles */
+        box-sizing: border-box;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+/* L */
+@media (max-width: 425px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta la barra de navegación */
+    .navbar h1 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 50%;
+        /* Expande el campo de búsqueda en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    /* Ajuste del contenedor principal */
+    .content {
+        padding: 0 10px;
+        margin-top: 30%;
+        padding: 5%;
+    }
+
+    /* Ajuste del menú lateral */
+    .sidebar {
+        display: none;
+    }
+
+    /* Ajustar el feed */
+    .feed,
+    .products-grid,
+    .feede {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Ajuste del catálogo */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajuste de los contenedores de perfil y configuración */
+    .profile-container,
+    .editarperfil,
+    .configuracion {
+        width: 100%;
+        /* Usa el ancho completo en móviles */
+        box-sizing: border-box;
+    }
+
+    footer {
+        display: none;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta la barra de navegación */
+    .navbar h1 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 50%;
+        /* Expande el campo de búsqueda en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        margin-top: 100px;
+    }
+
+    /* Ajuste del contenedor principal */
+    .content {
+        padding: 0 10px;
+        margin-top: 100px;
+        padding: 5%;
+    }
+
+    /* Ajuste del menú lateral */
+    /* Ajustar el feed */
+    .feed,
+    .products-grid,
+    .feede {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Ajuste del catálogo */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajuste de los contenedores de perfil y configuración */
+    .profile-container,
+    .editarperfil,
+    .configuracion {
+        width: 100%;
+        /* Usa el ancho completo en móviles */
+        box-sizing: border-box;
+    }
+
+    footer a {
+        justify-content: center;
+    }
+
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+        overflow-x: hidden;
+        /* Evita el desplazamiento horizontal */
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajusta la barra de navegación */
+    .navbar h1 {
+        margin-top: 0;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar input[type="text"] {
+        width: 50%;
+        /* Expande el campo de búsqueda en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        margin-top: 13.1%;
+    }
+
+    /* Ajuste del contenedor principal */
+    .content {
+        padding: 0 10px;
+        margin-top: 8%;
+        padding: 5%;
+        padding-left: 140px;
+    }
+
+    /* Ajuste del menú lateral */
+    /* Ajustar el feed */
+    .feed,
+    .products-grid,
+    .feede {
+        grid-template-columns: 1fr;
+        /* Una sola columna en móviles */
+        padding-left: 0px;
+        padding-right: 0;
+    }
+
+    /* Ajuste del catálogo */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* Ajuste de los contenedores de perfil y configuración */
+    .profile-container,
+    .editarperfil,
+    .configuracion {
+        width: 100%;
+        /* Usa el ancho completo en móviles */
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 72px;
+        padding-left: 18px;
+    }
+
+}
