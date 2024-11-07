@@ -50,12 +50,6 @@ document.getElementById('mensajes').addEventListener('click', function () {
     showSection('mensajesSection');
 });
 
-window.onload = function () {
-    showSection('facebookSection');
-};
-
-
-
 // Función para abrir una conversación
 function openChat(usuario) {
     document.querySelector('.chat-area h2').innerText = `Conversación con ${usuario}`;
