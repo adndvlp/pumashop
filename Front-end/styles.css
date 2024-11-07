@@ -961,7 +961,7 @@ footer a:hover {
 }
 
 /* Laptop */
-@media (min-width: 1024px) and (max-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1439px) {
     body {
         font-size: 14px;
         overflow-x: hidden;
@@ -1025,8 +1025,8 @@ footer a:hover {
     }
 
     footer {
-        width: 72px;
-        padding-left: 18px;
+        width: 74px;
+        padding-left: 16px;
     }
 
 }
