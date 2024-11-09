@@ -77,9 +77,6 @@ const loadUsers = async () => {
     }
 };
 
-
-loadUsers();
-
 const deleteUser = async (userId) => {
     const token = localStorage.getItem('jwt');
 
