@@ -968,65 +968,52 @@ footer a:hover {
         /* Evita el desplazamiento horizontal */
     }
 
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
     /* Ajusta la barra de navegación */
     .navbar h1 {
         margin-top: 0;
         font-size: 20px;
-        margin-bottom: 10px;
     }
 
     .navbar input[type="text"] {
-        width: 50%;
+        width: 20%;
         /* Expande el campo de búsqueda en pantallas pequeñas */
-        margin-bottom: 20px;
     }
 
     .sidebar {
-        margin-top: 13.1%;
+        margin-top: 6.1%;
     }
 
     /* Ajuste del contenedor principal */
     .content {
+        width: 100%;
         padding: 0 10px;
-        margin-top: 8%;
-        padding: 5%;
-        padding-left: 140px;
+        margin-top: 60px;
+        padding-left: 135px;
     }
 
     /* Ajuste del menú lateral */
     /* Ajustar el feed */
-    .feed,
-    .products-grid,
-    .feede {
-        grid-template-columns: 1fr;
-        /* Una sola columna en móviles */
-        padding-left: 0px;
-        padding-right: 0;
-    }
+
 
     /* Ajuste del catálogo */
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
+
+    .suggestions-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+        /* gap: 1px; */
+        margin-top: 15px;
+        gap: 2%;
+        margin-right: 15px;
     }
 
     /* Ajuste de los contenedores de perfil y configuración */
-    .profile-container,
-    .editarperfil,
-    .configuracion {
-        width: 100%;
-        /* Usa el ancho completo en móviles */
-        box-sizing: border-box;
+    .profile-container {
+        width: 50%;
     }
 
     footer {
-        width: 74px;
-        padding-left: 16px;
+        width: 75.5px;
+        padding-left: 18px;
     }
 
 }
